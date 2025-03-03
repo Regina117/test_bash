@@ -9,9 +9,9 @@ CURRENT_PID=$(pgrep -o "$PROCESS_NAME")
 EARLY_PID=$(cat "$PID_FILE" 2>/dev/null)
 
 #реализация условий
-if [[ - n "$CURRENT_PID" ]]; then
+if [[ -n "$CURRENT_PID" ]]; then
     #сравнение процессов
-    if [[ - n "$CURRENT_PID" != "$EARLY_PID"]]; then 
+    if [[ "$CURRENT_PID" != "$EARLY_PID"]]; then 
         #если отличается, то делаем следующие записи
         echo "$(date) - Процесс $PROCESS_NAME был перезапущен. Новый PID: "$CURRENT_PID" >> "$LOG_FILE"
         echo "$CURRENT_PID" > "$PID_FILE"
