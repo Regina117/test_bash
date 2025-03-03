@@ -14,13 +14,13 @@
 
 Для его запуска выполните следующие команды:
 
-```bash
+
 # Перемещение скрипта в нужное расположение
 sudo mv test.sh /usr/local/bin/
 
 # Делаем файл исполняемым
 sudo chmod +x /usr/local/bin/test.sh
-'''
+
 
 ### 2. Создание юнита systemd
 
@@ -28,7 +28,7 @@ sudo chmod +x /usr/local/bin/test.sh
 
 После создания файлов выполните следующие команды:
 
-```bash
+
 # Перезагрузка демона systemd
 sudo systemctl daemon-reload
 
@@ -37,7 +37,7 @@ sudo systemctl enable test.timer
 
 # Запуск таймера
 sudo systemctl start test.timer
-'''
+
 
 ### 3. Файлы
 
