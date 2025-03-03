@@ -10,14 +10,14 @@
 
 ## Решение
 
-1. Bash-скрипт `test.sh`
+### 1. Bash-скрипт `test.sh`
 
 Для его запуска выполните следующие команды:
 
-# Перемещение скрипта в нужное расположение
+Перемещение скрипта в нужное расположение
 sudo mv test.sh /usr/local/bin/
 
-# Делаем файл исполняемым
+Делаем файл исполняемым
 sudo chmod +x /usr/local/bin/test.sh
 
 ### 2. Создание юнита systemd
@@ -27,13 +27,13 @@ sudo chmod +x /usr/local/bin/test.sh
 После создания файлов выполните следующие команды:
 
 
-# Перезагрузка демона systemd
+Перезагрузка демона systemd
 sudo systemctl daemon-reload
 
-# Включение таймера
+Включение таймера
 sudo systemctl enable test.timer
 
-# Запуск таймера
+Запуск таймера
 sudo systemctl start test.timer
 
 ### 3. Файлы
