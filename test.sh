@@ -1,7 +1,7 @@
 #!/bin/bash
 PROCESS_NAME=test
 LOG_FILE="/var/log/monitoring.log"
-URL="https://test.com/monitoring/test/api"
+MONITORING_URL="https://test.com/monitoring/test/api"
 PID_FILE="/tmp/${PROCESS_NAME}_monitor.pid"
 
 #текущий процесс
@@ -13,7 +13,7 @@ if [[ -n "$CURRENT_PID" ]]; then
     #сравнение процессов
     if [[ "$CURRENT_PID" != "$EARLY_PID" ]]; then 
         #если отличается, то делаем следующие записи
-        echo "$(date) - Процесс $PROCESS_NAME был перезапущен. Новый PID: "$CURRENT_PID" >> "$LOG_FILE"
+        echo "$(date) - Процесс $PROCESS_NAME был перезапущен. Новый PID: $CURRENT_PID" >> "$LOG_FILE"
         echo "$CURRENT_PID" > "$PID_FILE"
     fi
 
