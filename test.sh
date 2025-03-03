@@ -21,6 +21,6 @@ if [[ -n "$CURRENT_PID" ]]; then
     if curl -s --head --request GET "$MONITORING_URL" | grep "200 OK" > /dev/null; then
         curl -s -X GET "$MONITORING_URL" > /dev/null
     else 
-        echo "$(date) - Сервер мониторинга недоступен" >> "$LOG_FILE"
+         echo "$(date) - Сервер мониторинга недоступен" >> "$LOG_FILE"
     fi
 fi        
