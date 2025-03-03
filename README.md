@@ -10,17 +10,15 @@
 
 ## Решение
 
-### 1. Bash-скрипт `test.sh`
+1. Bash-скрипт `test.sh`
 
 Для его запуска выполните следующие команды:
-
 
 # Перемещение скрипта в нужное расположение
 sudo mv test.sh /usr/local/bin/
 
 # Делаем файл исполняемым
 sudo chmod +x /usr/local/bin/test.sh
-
 
 ### 2. Создание юнита systemd
 
@@ -37,7 +35,6 @@ sudo systemctl enable test.timer
 
 # Запуск таймера
 sudo systemctl start test.timer
-
 
 ### 3. Файлы
 
