@@ -47,3 +47,11 @@ test.timer — таймер для запуска скрипта каждую м
 ### 4. Логи
 
 Логи будут записываться в файл /var/log/monitoring.log.
+
+### 5. Проверка работы
+
+Запустить скрипт и проверить логи
+test.sh
+cat /var/log/monitoring.log
+
+sudo systemctl status test.service

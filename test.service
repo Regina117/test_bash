@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 ExecStart=/bin/bash /usr/local/bin/test.sh
-Restart=always
+Type=oneshot
 
 [Install]
 WantedBy=multi-user.target
