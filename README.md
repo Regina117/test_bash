@@ -55,3 +55,6 @@ test.sh
 cat /var/log/monitoring.log
 
 sudo systemctl status test.service
+
+проверяем работу таймера:
+sudo systemctl list-timers --all | grep test.timer
