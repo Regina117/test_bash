@@ -1,0 +1,10 @@
+[Unit]
+Description=Отрабатывать каждую минуту
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=1min
+Unit=test.service
+
+[Install]
+WantedBy=timers.target

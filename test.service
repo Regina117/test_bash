@@ -1,0 +1,10 @@
+[Unit]
+Description=Скрипт мониторинга процесса
+After=network.target
+
+[Service]
+ExecStart=/bin/bash /usr/local/bin/test.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
