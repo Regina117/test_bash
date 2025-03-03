@@ -21,7 +21,8 @@ sudo mv test.sh /usr/local/bin/
 # Делаем файл исполняемым
 sudo chmod +x /usr/local/bin/test.sh
 
-2. Создание юнита systemd
+### 2. Создание юнита systemd
+
 Создайте файлы test.service и test.timer в директории /etc/systemd/system.
 
 После создания файлов выполните следующие команды:
@@ -35,12 +36,14 @@ sudo systemctl enable test.timer
 # Запуск таймера
 sudo systemctl start test.timer
 
-Файлы
+### 3. Файлы
+
 test.sh — скрипт для мониторинга процесса.
 
 test.service — юнит для управления скриптом через systemd.
 
 test.timer — таймер для запуска скрипта каждую минуту.
 
-Логи
+### 4. Логи
+
 Логи будут записываться в файл /var/log/monitoring.log.
